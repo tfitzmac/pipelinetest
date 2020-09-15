@@ -15,5 +15,5 @@ steps:
   inputs:
     azureSubscription: 'script-connection'
     ScriptPath: './Deploy-AzTemplate.ps1'
-    ScriptArguments: -ResourceGroupName 'demogroup' -ResourceGroupLocation 'centralus'
+    ScriptArguments: -ResourceGroupName 'demogroup' -ResourceGroupLocation 'centralus' -ArtifactStagingDirectory 'Templates'
     azurePowerShellVersion: LatestVersion

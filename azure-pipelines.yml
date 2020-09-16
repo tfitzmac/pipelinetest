@@ -1,19 +1,7 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- master
-
-pool:
-  name: Hosted Windows 2019 with VS2019
-  demands: azureps
-
-steps:
-- task: AzurePowerShell@4
+- task: AzurePowerShell@5
   inputs:
     azureSubscription: 'script-connection'
-    ScriptPath: './Deploy-AzTemplate.ps1'
-    ScriptArguments: -ResourceGroupName 'demogroup' -ResourceGroupLocation 'centralus' -ArtifactStagingDirectory 'Templates'
-    azurePowerShellVersion: LatestVersion
+    ScriptType: 'FilePath'
+    ScriptPath: 'Deploy-AzTemplate.ps1'
+    ScriptArguments: '-ResourceGroupName ''demogroup'' -ResourceGroupLocation ''centralus'' -ArtifactStagingDirectory ''Templates'''
+    azurePowerShellVersion: 'LatestVersion'

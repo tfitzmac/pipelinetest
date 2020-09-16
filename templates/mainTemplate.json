@@ -4,7 +4,8 @@
     "parameters": {
         "storagePrefix": {
             "type": "string",
-            "maxLength": 11
+            "maxLength": 11,
+            "defaultValue": "tfstore0916"
         },
         "storageSKU": {
             "type": "string",

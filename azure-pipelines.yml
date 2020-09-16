@@ -2,6 +2,5 @@
   inputs:
     azureSubscription: 'script-connection'
     ScriptType: 'FilePath'
-    ScriptPath: 'Deploy-AzTemplate.ps1'
-    ScriptArguments: 
+    ScriptPath: './Deploy-AzTemplate.ps1'
     azurePowerShellVersion: 'LatestVersion'

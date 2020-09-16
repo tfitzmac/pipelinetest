@@ -1,3 +1,7 @@
+trigger: 
+ - master
+
+steps:
 - task: AzurePowerShell@5
   inputs:
     azureSubscription: 'script-connection'
